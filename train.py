@@ -195,8 +195,8 @@ class DataLoader:
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"using device: {device}")
-# max_length = 30
-# num_return_sequences = 5
+max_length = 30
+num_return_sequences = 5
 model = GPT(GPTConfig())
 model.to(device)
 model = torch.compile(model)
